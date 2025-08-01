@@ -130,3 +130,53 @@ main{
     text-decoration: none;
     font-weight: 700;
 }
+
+.produtos{
+    display: flex;
+    flex-direction: row;
+    gap: 2.4375rem;
+}
+
+.card{
+    width: 408px;
+    height: 819px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.25);
+}
+.imagemComBotoesEpop{
+    width: 408px;
+    height: 588px;
+    background-image: url(../assets/products/roupa.png);
+    background-size: cover;
+}
+.botoesEpop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7.1875rem;
+    padding-top: 16px;
+}
+.pop{
+    width: 119px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .6875rem;
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .3125rem;
+}
+.botoesEpop img{
+    width: 48px;
+    height: 48px;
+}
+.botoes img{
+    width: 64px;
+    height: 64px;
+}
+.botoes button{
+    border: none;
+    background-color: transparent;
+}
