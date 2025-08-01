@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Inter';
 }
 
 /*header*/
@@ -9,13 +10,18 @@ header{
     height: 8.6875rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: #415FCE;
     align-items: center;
 }
 .imgLogo{
     width: 6.875rem;
     height: 6.1875rem;
-    padding: 1.25rem 0 1.25rem 4.3125rem;
+    padding-left: 4.3125rem;
+}
+header h1{
+    font-size: 4rem;
+    font-weight: 400;
 }
 header div{ /*modo administrador*/
     width: 19.6875rem;
@@ -27,13 +33,13 @@ header div{ /*modo administrador*/
     background-color: #1F9B5F;
     gap: 1.3125rem;
     border-radius: 20px;
+    margin-right: 61px;
 }
 header div img{
     width: 2.5rem;
     height: 2.5rem;    
 }
 header div p{
-    font-family: 'Inter';
     color: white;
     font-size: 20px;
     font-weight: 500;
