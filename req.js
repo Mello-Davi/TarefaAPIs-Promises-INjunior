@@ -1,13 +1,14 @@
-async function getProducts(page = 1, limit = 5) {
+async function getProducts(page = 1, limit = 9) {
     const url = `http://localhost:3000/products?_limit=${limit}&_page=${page}`;
     try {
         const response = await fetch(url);
         const products = await response.json();
-        const total = response.headers.get('X-Total-Count');
+        const total = parseInt(response.headers.get('X-Total-Count')) || 0;
 
         const container = document.querySelector(".produtos");
         container.innerHTML = ""; // limpa os cards anteriores
 
+        // Gera os cards de produtos
         products.forEach(produto => {
             const card = document.createElement("div");
             card.classList.add("card");
@@ -40,11 +41,47 @@ async function getProducts(page = 1, limit = 5) {
             container.appendChild(card);
         });
 
-        console.log('Produtos carregados:', products);
-        console.log('Total de produtos:', total);
+        // Gera a paginação dinâmica
+        const paginacaoContainer = document.querySelector(".paginacao");
+        paginacaoContainer.innerHTML = "";
+
+        const totalPaginas = Math.ceil(total / limit);
+
+        // Botão "<"
+        const btnAnterior = document.createElement("button");
+        btnAnterior.innerHTML = `<img src="../assets/products/pageBefore.png" alt="Anterior">`;
+        btnAnterior.disabled = page === 1;
+        btnAnterior.addEventListener("click", () => getProducts(page - 1, limit));
+        paginacaoContainer.appendChild(btnAnterior);
+
+        // Lógica de páginas visíveis (máx. 5)
+        let startPage = Math.max(1, page - 2);
+        let endPage = Math.min(totalPaginas, startPage + 4);
+        if (endPage - startPage < 4) {
+            startPage = Math.max(1, endPage - 4);
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            const botao = document.createElement("button");
+            botao.textContent = i;
+            if (i === page) {
+                botao.classList.add("botaoDaPagina");
+            }
+            botao.addEventListener("click", () => getProducts(i, limit));
+            paginacaoContainer.appendChild(botao);
+        }
+
+        // Botão ">"
+        const btnProximo = document.createElement("button");
+        btnProximo.innerHTML = `<img src="../assets/products/pageNext.png" alt="Próximo">`;
+        btnProximo.disabled = page === totalPaginas;
+        btnProximo.addEventListener("click", () => getProducts(page + 1, limit));
+        paginacaoContainer.appendChild(btnProximo);
+
     } catch (error) {
         console.error('Erro ao buscar produtos:', error);
     }
 }
 
-getProducts(1, 5); // chamada inicial
+// Chamada inicial
+getProducts(1, 9);

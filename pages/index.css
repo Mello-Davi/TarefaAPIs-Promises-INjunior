@@ -143,6 +143,9 @@ main{
 
 
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 408px;
     height: 819px;
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.25);
@@ -190,6 +193,7 @@ main{
     height: 231px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     background-color: #243B98;
 }
 
@@ -223,8 +227,10 @@ main{
 .preco{
     display: flex;
     justify-content: flex-end;
-    padding-top: 60px;
+    align-items: center;
+    padding-bottom: 20px;
     padding-right: 20px;
+    margin-top: auto;
 }
 .preco p{
     font-size: 40px;
@@ -279,4 +285,6 @@ main{
 
   .botaoDaPagina{
     background-color: #1F9B5F;
+    color: white;
+    font-weight: bold;
   }
