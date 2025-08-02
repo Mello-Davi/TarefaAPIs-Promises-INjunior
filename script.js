@@ -21,7 +21,7 @@ async function getProducts(page = 1, limit = 9) {
                         </div>
                         <div class="botoes">
                             <button onclick="excluirProduto(${produto.id})"><img src="../assets/products/delete.png" alt="Excluir"></button>
-                            <a href="./editar.html?id=${produto.id}"><img src="../assets/products/editar.png" alt="Editar"></a>
+                            <a href="./editar.html?id=${produto.id}" target="_blank"><img src="../assets/products/editar.png" alt="Editar"></a>
                         </div>
                     </div>
                 </div>
