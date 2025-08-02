@@ -13,7 +13,7 @@ async function getProducts(page = 1, limit = 9) {
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
-                <div class="imagemComBotoesEpop" style="background-image: url('${produto.image}'); background-size: cover;">
+                <div class="imagemComBotoesEpop" style="background-image: url('../assets/products/roupa.png'); background-size: cover;">
                     <div class="botoesEpop">
                         <div class="pop">
                             <p>${produto.rating}</p>
