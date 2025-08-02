@@ -283,7 +283,7 @@ main{
     cursor: pointer; 
   }
 
-  .botaoDaPagina{
+  .paginacao button.botaoDaPagina{
     background-color: #1F9B5F;
     color: white;
     font-weight: bold;
