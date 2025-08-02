@@ -1,4 +1,4 @@
-async function getProducts(page = 1, limit = 9) {
+async function getProducts(page = 1, limit = 5) {
     const url = `http://localhost:3000/products?_limit=${limit}&_page=${page}`;
     try {
         const response = await fetch(url);
@@ -47,4 +47,4 @@ async function getProducts(page = 1, limit = 9) {
     }
 }
 
-getProducts(1, 9); // chamada inicial
+getProducts(1, 5); // chamada inicial
