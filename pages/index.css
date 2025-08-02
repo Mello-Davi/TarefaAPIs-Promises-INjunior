@@ -133,11 +133,14 @@ main{
     font-weight: 700;
 }
 
-.produtos{
-    display: flex;
-    flex-direction: row;
-    gap: 2.4375rem;
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 2rem;
+    width: 90%;
 }
+
 
 .card{
     width: 408px;
