@@ -135,10 +135,10 @@ main{
 
 .produtos {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     padding: 2rem;
-    width: 90%;
 }
 
 
@@ -260,19 +260,23 @@ main{
 .paginacao > button:first-child {
     background-color: transparent;
     border: none;
-    padding: 0; /* Remove o preenchimento interno */
-    margin: 0;  /* Remove a margem */
-    color: inherit; /* Usa a cor do texto do elemento pai */
-    font: inherit; /* Usa a fonte do elemento pai */
-    cursor: pointer; /* Mantém o cursor de clique */
+    padding: 0; 
+    margin: 0;  
+    color: inherit; 
+    font: inherit; 
+    cursor: pointer; 
   }
   
 .paginacao > button:last-child {
     background-color: transparent;
     border: none;
-    padding: 0; /* Remove o preenchimento interno */
-    margin: 0;  /* Remove a margem */
-    color: inherit; /* Usa a cor do texto do elemento pai */
-    font: inherit; /* Usa a fonte do elemento pai */
-    cursor: pointer; /* Mantém o cursor de clique */
+    padding: 0; 
+    margin: 0;  
+    color: inherit; 
+    font: inherit; 
+    cursor: pointer; 
+  }
+
+  .botaoDaPagina{
+    background-color: #1F9B5F;
   }
