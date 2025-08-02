@@ -233,12 +233,46 @@ main{
 }
 
 /*botoes da paginacao*/
+.paginacao{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 68px;
+    gap: .5rem;
+}
 .paginacao button{
     width: 32px;
     height: 32px;
     font-size: 12px;
     font-weight: 600;
-    color: white;
+    color: #F1EFFF;
+    background-color: #BDB7B6;
     border: none;
     border-radius: 50%;
 }
+.paginacao img{
+    width: 17.5px;
+    height: 32.5px;
+}
+.paginacao > button:first-child {
+    background-color: transparent;
+    border: none;
+    padding: 0; /* Remove o preenchimento interno */
+    margin: 0;  /* Remove a margem */
+    color: inherit; /* Usa a cor do texto do elemento pai */
+    font: inherit; /* Usa a fonte do elemento pai */
+    cursor: pointer; /* Mantém o cursor de clique */
+  }
+  
+.paginacao > button:last-child {
+    background-color: transparent;
+    border: none;
+    padding: 0; /* Remove o preenchimento interno */
+    margin: 0;  /* Remove a margem */
+    color: inherit; /* Usa a cor do texto do elemento pai */
+    font: inherit; /* Usa a fonte do elemento pai */
+    cursor: pointer; /* Mantém o cursor de clique */
+  }
