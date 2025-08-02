@@ -230,5 +230,15 @@ main{
     font-size: 40px;
     font-weight: 700;
     color: #8CBF26;
+}
 
+/*botoes da paginacao*/
+.paginacao button{
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 50%;
 }
