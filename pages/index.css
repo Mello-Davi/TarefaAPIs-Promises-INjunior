@@ -187,6 +187,7 @@ main{
 .botoes button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 .descProd{
     width: 408px;
@@ -258,6 +259,7 @@ main{
     background-color: #BDB7B6;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 .paginacao img{
     width: 17.5px;
@@ -287,4 +289,5 @@ main{
     background-color: #1F9B5F;
     color: white;
     font-weight: bold;
+    cursor: pointer;
   }
