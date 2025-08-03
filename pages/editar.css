@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+/*===============================HEADER==============================*/
+header{
+    width: 100%;
+    height: 8.6875rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: #415FCE;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgLogo{
+    width: 6.875rem;
+    height: 6.1875rem;
+    padding-left: 4.3125rem;
+}
+header h1{
+    justify-self: center;
+    font-size: 4rem;
+    font-weight: 400;
+}
+header div{ /*modo administrador*/
+    width: 19.6875rem;
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F9B5F;
+    gap: 1.3125rem;
+    border-radius: 20px;
+    margin-right: 61px;
+    justify-self: end;
+}
+header div img{
+    width: 2.5rem;
+    height: 2.5rem;    
+}
+header div p{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*===============================FOOTER================================*/
+footer{
+    font-family: 'Roboto';
+}
+.endEfaleconos{
+    width: 100%;
+    height: 11rem;
+    background-color: #FCF7F8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.endEfaleconos p{
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+footer h3{
+    font-size: 24px;
+    color: #4E8098;
+    font-weight: 500;
+}
+.endereco{
+    display: flex;
+    flex-direction: column;
+    width: 302px;
+    height: 128px;
+    padding-left: 4.3125rem;
+}
+.faleConos{
+    width: 302px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.redesSociais{
+    display: flex;
+    flex-direction: row;
+}
+.redesSociais img{
+    width: 1.875rem;
+    height: 1.875rem;
+}  
+
+.copyRight{
+    width: 100%;
+    height: 2.125rem;
+    background-color: #415FCE;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyRight p{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;    
+}
+/*===========================MAIN=============================*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    font-family: 'Inter';
+    font-size: 48px;
+    font-weight: 600;
+    padding: 64px 0;
+}
+
+.caixaDeInputsEbotao{
+    width: 1209px;
+    height: 493px;
+    background-color: #247BB1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 64px;
+}
+
+.caixaDeInputs{
+    width: 1018px;
+    height: 290px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 95px 0 96px;
+    margin-bottom: 59px;
+    gap: 6.375rem;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inputs input{
+    width: 460px;   
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background-color: #F0EBEB;
+    padding-left: 16px;
+}
+
+.caixaDeInputsEbotao button{
+    width: 167px;
+    height: 45px;
+    background-color: #1F9B5F;
+    color: white;
+    font-family: 'Inter';
+    font-size: 24px;
+    border: none;
+    border-radius: 12px;
+}
+
+
