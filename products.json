@@ -509,6 +509,26 @@
       "description": "pequeno gafanhoto",
       "inStock": true,
       "rating": "5"
+    },
+    {
+      "id": 1754192137819,
+      "name": "Camisa da IN",
+      "price": 6,
+      "image": "adsda",
+      "category": "Camisas",
+      "description": "Seja da alcateia",
+      "inStock": true,
+      "rating": 4
+    },
+    {
+      "id": 1754192279078,
+      "name": "Camisa PoloTECH",
+      "price": 0.01,
+      "image": "adsda",
+      "category": "usados",
+      "description": "pequeno gafanhoto",
+      "inStock": true,
+      "rating": 3.3
     }
   ]
 }

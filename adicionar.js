@@ -4,13 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        // **Ajustado para capturar os IDs corretos do seu HTML:**
+        // Captura os valores dos inputs
         const nome = document.getElementById('name').value;
-        const preco = parseFloat(document.getElementById('price').value);
         const imagem = document.getElementById('image').value;
         const categoria = document.getElementById('category').value;
         const descricao = document.getElementById('description').value;
-        const rating = document.getElementById('rating').value;
+
+        // VALIDAÇÃO E FORMATAÇÃO DO PREÇO
+        let precoString = document.getElementById('price').value.replace(',', '.');
+        const preco = parseFloat(precoString);
+        
+        if (isNaN(preco) || !/^\d+(\.\d{1,2})?$/.test(precoString)) {
+            alert('Por favor, insira um preço válido com no máximo duas casas decimais.');
+            return; // Impede o envio do formulário
+        }
+
+        // VALIDAÇÃO E FORMATAÇÃO DA AVALIAÇÃO (RATING)
+        let ratingString = document.getElementById('rating').value.replace(',', '.');
+        const rating = parseFloat(ratingString);
+
+        if (isNaN(rating) || rating < 1 || rating > 5 || !/^\d+(\.\d{1})?$/.test(ratingString)) {
+            alert('Por favor, insira uma avaliação válida entre 1 e 5, com no máximo uma casa decimal.');
+            return; // Impede o envio do formulário
+        }
 
         const novoProduto = {
             id: Date.now(),
