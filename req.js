@@ -88,6 +88,32 @@ async function getProducts(page = 1, limit = 9) {
         console.error('Erro ao buscar produtos:', error);
     }
 }
+// Função para excluir um produto
+async function excluirProduto(id) {
+    if (confirm('Tem certeza que deseja excluir este produto?')) {
+        const url = `http://localhost:3000/products/${id}`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Produto excluído com sucesso!');
+                // Recarrega a lista de produtos após a exclusão
+                getProducts();
+            } else {
+                alert('Erro ao excluir produto. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro na requisição:', error);
+            alert('Não foi possível conectar com o servidor.');
+        }
+    }
+}
 
 // Chamada inicial
 getProducts(1, 9);
