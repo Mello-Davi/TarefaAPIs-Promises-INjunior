@@ -1,7 +1,13 @@
 async function getProducts(page = 1, limit = 9) {
     const url = `http://localhost:3000/products?_limit=${limit}&_page=${page}`;
     try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
         const products = await response.json();
         const total = parseInt(response.headers.get('X-Total-Count')) || 0;
 
