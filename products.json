@@ -11,14 +11,13 @@
       "rating": 5
     },
     {
-      "id": 2,
       "name": "Camisa Angular",
       "price": 34.05,
       "image": "https://via.placeholder.com/150?text=Camisa+Angular",
       "category": "Canecas",
       "description": "Super leve e confortável.",
-      "inStock": true,
-      "rating": 3
+      "rating": "3",
+      "id": 2
     },
     {
       "id": 3,
@@ -499,26 +498,6 @@
       "description": "Design moderno e geek.",
       "inStock": true,
       "rating": 4.3
-    },
-    {
-      "id": 1754191301208,
-      "name": "Camisa PoloTECH",
-      "price": 10,
-      "image": "adsda",
-      "category": "usados",
-      "description": "pequeno gafanhoto",
-      "inStock": true,
-      "rating": "5"
-    },
-    {
-      "id": 1754192137819,
-      "name": "Camisa da IN",
-      "price": 6,
-      "image": "adsda",
-      "category": "Camisas",
-      "description": "Seja da alcateia",
-      "inStock": true,
-      "rating": 4
     }
   ]
 }

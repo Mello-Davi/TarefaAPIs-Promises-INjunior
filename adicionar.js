@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 alert('Produto adicionado com sucesso!');
                 form.reset();
+                window.location.href = './index.html';
             } else {
                 alert('Erro ao adicionar produto. Tente novamente.');
             }
